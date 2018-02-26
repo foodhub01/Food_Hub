@@ -27,14 +27,15 @@ public class CustomerDAOImpl implements CustomerDAO
         
     try {
         Connection con = DBConnection.getConnection();
-      PreparedStatement psmt = con.prepareStatement("Insert Customer(String customerName,String address,String emailId,int contactNo,String date,String password) Values(?,?,?,?,?,?)");
-        psmt.setString(1,customer.getCustomerName());
-        psmt.setString(2,customer.getAddress());
-        psmt.setString(3,customer.getEmailId());
-        psmt.setInt(4,customer.getContactNo());
-        psmt.setString(5,customer.getDate());
-        psmt.setString(6,customer.getPassword());
-        count = psmt.executeUpdate();
+      PreparedStatement preparedstatement = con.prepareStatement("Insert Customer(customerName,address,emailId,contactNo,date,password) Values(?,?,?,?,?,?)");
+        preparedstatement.setString(1,customer.getCustomerName());
+        preparedstatement.setString(2,customer.getAddress());
+        preparedstatement.setString(3,customer.getEmailId());
+        preparedstatement.setInt(4,customer.getContactNo());
+        java.util.Date date = new java.util.Date(customer.getDate());
+        preparedstatement.setDate(5,new Date(date.getYear(),date.getMonth(),date.getDay()));
+        preparedstatement.setString(6,customer.getPassword());
+        count = preparedstatement.executeUpdate();
     } catch (SQLException ex) {
         Logger.getLogger(CustomerDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
     }
