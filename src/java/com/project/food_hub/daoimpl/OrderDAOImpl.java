@@ -94,14 +94,14 @@ public class OrderDAOImpl implements OrderDAO {
             if(resultSet!=null){
                 //resultSet.first();
                 while(resultSet.next()){
-                    int orderId = resultSet.getInt(1);
+                    int orderid = resultSet.getInt(1);
                     int customerId = resultSet.getInt(2);
                     int productId = resultSet.getInt(3);
                     int employeeId = resultSet.getInt(4);
                     int quantity = resultSet.getInt(5);
                     int billNo= resultSet.getInt(6);
                     String date= resultSet.getString(7);
-                    Order order = new Order(orderId,customerId,productId,employeeId,quantity,billNo,date);
+                    Order order = new Order(orderid,customerId,productId,employeeId,quantity,billNo,date);
                     orderList.add(order);
                 }
             }

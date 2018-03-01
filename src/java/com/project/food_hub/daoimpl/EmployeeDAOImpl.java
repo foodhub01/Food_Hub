@@ -24,10 +24,10 @@ public class EmployeeDAOImpl implements EmployeeDAO{
         try {
              Connection con = DBConnection.getConnection();
   
-            PreparedStatement psmt = con.prepareStatement("Insert into Employee() Values(?,?,?,?)");
+            PreparedStatement psmt = con.prepareStatement("Insert into Employee(employeeName,designation,employeeContact,employeePassword) Values(?,?,?,?)");
             psmt.setString(1,employee.getEmployeeName());
             psmt.setString(2,employee.getDesignation());
-            psmt.setInt(3,employee.getEmployeeContact());
+            psmt.setString(3,employee.getEmployeeContact());
             psmt.setString(4,employee.getEmployeePassword());
             count  = psmt.executeUpdate();
         } catch (SQLException ex) {
@@ -55,7 +55,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
         List<Employee> employeeList = null;
         try {
             Connection connection = DBConnection.getConnection(); 
-            PreparedStatement preparedStatement = connection.prepareStatement("select * from employees");
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from employee");
             ResultSet resultSet = preparedStatement.executeQuery();
             employeeList = new ArrayList<Employee>();
             if(resultSet!=null){
@@ -63,7 +63,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
                     int employeeId = resultSet.getInt(1);
                     String employeeName = resultSet.getString(2);
                     String designation = resultSet.getString(3);
-                    int employeeContact = resultSet.getInt(4);
+                    String employeeContact = resultSet.getString(4);
                     String employeePassword = resultSet.getString(5);
                     Employee employee = new Employee(employeeId,employeeName,designation,employeeContact,employeePassword);
                     employeeList.add(employee);
@@ -82,17 +82,17 @@ public class EmployeeDAOImpl implements EmployeeDAO{
     List<Employee> employeeList = null;
         try {
             Connection connection = DBConnection.getConnection(); 
-            PreparedStatement preparedStatement = connection.prepareStatement("select * from employees");
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from employee");
             ResultSet resultSet = preparedStatement.executeQuery();
             employeeList = new ArrayList<Employee>();
             if(resultSet!=null){
                 while(resultSet.next()){
-                    int employeeId = resultSet.getInt(1);
+                    int employeeid = resultSet.getInt(1);
                     String employeeName = resultSet.getString(2);
                     String designation = resultSet.getString(3);
-                    int employeeContact = resultSet.getInt(4);
+                    String employeeContact = resultSet.getString(4);
                     String employeePassword = resultSet.getString(5);
-                    Employee employee = new Employee(employeeId,employeeName,designation,employeeContact,employeePassword);
+                    Employee employee = new Employee(employeeid,employeeName,designation,employeeContact,employeePassword);
                     employeeList.add(employee);
                 }
             }
@@ -114,7 +114,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
              PreparedStatement psmt = con.prepareStatement("update Employee set  employeeName=?,designation=?,employeecontact=?,employeePassword=? where employeeId=?");
              psmt.setString(1,employee.getEmployeeName());
              psmt.setString(2,employee.getDesignation());
-             psmt.setInt(3,employee.getEmployeeContact());
+             psmt.setString(3,employee.getEmployeeContact());
              psmt.setString(4,employee.getEmployeePassword());
              psmt.setInt(5,employeeId);
              count = psmt.executeUpdate();

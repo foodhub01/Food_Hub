@@ -19,7 +19,7 @@ import com.project.food_hub.entities.Table;
 public class TestApp {
    public static void main(String[] args){
         CustomerDAO customerDAO = new CustomerDAOImpl();
-        int count = customerDAO.addCustomer(new Customer("qwert","xyz1696956","rp789456@gmail.com",159159159,"1985/11/17","123456789"));
+        int count = customerDAO.addCustomer(new Customer("qwert","xyz1696956","rp789456@gmail.com","1239874560","1985/11/17","123456789"));
         if(count>0)System.out.println("Record Added Successfully");
         else System.out.println("Record Failed to get added"); 
    

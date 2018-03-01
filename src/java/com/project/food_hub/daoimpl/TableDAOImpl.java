@@ -90,7 +90,6 @@ public class TableDAOImpl implements TableDAO {
             ResultSet resultSet=psmt.executeQuery();
             tableList = new ArrayList<Table>();
             if(resultSet!=null){
-                //resultSet.first();
                 while(resultSet.next()){
                     int tableno = resultSet.getInt(1);
                     int capacity = resultSet.getInt(2);

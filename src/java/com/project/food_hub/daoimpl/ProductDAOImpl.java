@@ -24,7 +24,7 @@ public class ProductDAOImpl implements ProductDAO{
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement psmt=con.prepareStatement("Insert Product(String productname,int price,int stock) values(?,?,?)");
+            PreparedStatement psmt=con.prepareStatement("Insert Product(productname,price,stock) values(?,?,?)");
             psmt.setString(1,product.getProductName());
             psmt.setInt(1,product.getPrice());
             psmt.setInt(3,product.getStock());
@@ -89,11 +89,11 @@ public class ProductDAOImpl implements ProductDAO{
               if(resultSet!=null){
                 //resultSet.first();
                 while(resultSet.next()){
-                    int productId = resultSet.getInt(1);
+                    int productid = resultSet.getInt(1);
                     String productName = resultSet.getString(2);
                     int price = resultSet.getInt(3);
                     int stock = resultSet.getInt(4);
-                    Product product = new Product(productId,productName,price,stock);
+                    Product product = new Product(productid,productName,price,stock);
                     productList.add(product);
                 }
             }

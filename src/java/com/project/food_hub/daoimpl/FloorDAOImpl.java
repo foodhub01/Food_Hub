@@ -84,9 +84,9 @@ public class FloorDAOImpl implements FloorDAO{
             floorList = new ArrayList<Floor>();
             if(resultSet!=null){
                   while(resultSet.next()){
-                    int floorNo = resultSet.getInt(1);
+                    int floorno = resultSet.getInt(1);
                     int floorCapacity = resultSet.getInt(2);
-                    Floor floor = new Floor(floorNo,floorCapacity);
+                    Floor floor = new Floor(floorno,floorCapacity);
                     floorList.add(floor);
                 }
             }

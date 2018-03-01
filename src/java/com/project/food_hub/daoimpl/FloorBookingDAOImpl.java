@@ -25,7 +25,7 @@ public class FloorBookingDAOImpl implements FloorBookingDAO{
         int count = 0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement psmt = con.prepareStatement("Insert FloorBooking() into values(?,?)");
+            PreparedStatement psmt = con.prepareStatement("Insert FloorBooking(floorno,customerid) into values(?,?)");
             psmt.setInt(1,floorbooking.getBookFloorId());
             psmt.setInt(2,floorbooking.getFloorNo());
             count = psmt.executeUpdate();
@@ -59,10 +59,10 @@ public class FloorBookingDAOImpl implements FloorBookingDAO{
             floorBookingList = new ArrayList<FloorBooking>();
             if(resultSet!=null){
                 while(resultSet.next()){
-                    int floorBookId = resultSet.getInt(1);
+                    int bookFloorid = resultSet.getInt(1);
                     int floorNo = resultSet.getInt(2);
                     int customerId = resultSet.getInt(3);
-                    FloorBooking floorBooking = new FloorBooking(floorBookId,floorNo,customerId);
+                    FloorBooking floorBooking = new FloorBooking(bookFloorid,floorNo,customerId);
                     floorBookingList.add(floorBooking);
                 }
             }
@@ -85,10 +85,10 @@ public class FloorBookingDAOImpl implements FloorBookingDAO{
             floorBookingList = new ArrayList<FloorBooking>();
             if(resultSet!=null){
                 while(resultSet.next()){
-                    int floorBookId = resultSet.getInt(1);
+                    int BookFloorid = resultSet.getInt(1);
                     int floorNo = resultSet.getInt(2);
                     int customerId = resultSet.getInt(3);
-                    FloorBooking floorBooking = new FloorBooking(floorBookId,floorNo,customerId);
+                    FloorBooking floorBooking = new FloorBooking(BookFloorid,floorNo,customerId);
                     floorBookingList.add(floorBooking);
                 }
             }

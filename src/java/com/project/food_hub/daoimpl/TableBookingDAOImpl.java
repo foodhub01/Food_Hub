@@ -89,10 +89,10 @@ public class TableBookingDAOImpl implements TableBookingDAO{
             if(resultSet!=null){
                 //resultSet.first();
                 while(resultSet.next()){
-                    int booktableId = resultSet.getInt(1);
+                    int bookTableid = resultSet.getInt(1);
                     int customerId = resultSet.getInt(2);
                     int tableno = resultSet.getInt(3);
-                    TableBooking tableBooking = new TableBooking(booktableId,customerId,tableno);
+                    TableBooking tableBooking = new TableBooking(bookTableid,customerId,tableno);
                     tablebookinglist.add(tableBooking);
                 }
             }
