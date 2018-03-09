@@ -14,7 +14,7 @@ import java.util.List;
  */
 public interface EmployeeDAO {
     int addEmployee(Employee employee);
-    int deleteCustomer(int employeeId);
+    int deleteEmployee(int employeeId);
     List<Employee> getAllEmployee();
     Employee getEmployeeById(int employeeId);
     int updateEmployee(int employeeId,Employee employee);

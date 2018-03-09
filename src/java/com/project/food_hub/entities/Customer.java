@@ -27,6 +27,14 @@ public class Customer {
         this.customerName = customerName;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+    
     public String getAddress() {
         return address;
     }
@@ -67,9 +75,10 @@ public class Customer {
         this.password = password;
     }
 
-    public Customer(int customerId, String customerName, String address, String emailId,String contactNo, String date, String password) {
+    public Customer(int customerId, String customerName,String userName, String address, String emailId,String contactNo, String date, String password) {
         this.customerId = customerId;
         this.customerName = customerName;
+        this.userName = userName;
         this.address = address;
         this.emailId = emailId;
         this.contactNo = contactNo;
@@ -77,8 +86,9 @@ public class Customer {
         this.password = password;
     }
 
-    public Customer(String customerName, String address, String emailId, String contactNo, String date, String password) {
+    public Customer(String customerName,String userName, String address, String emailId, String contactNo, String date, String password) {
         this.customerName = customerName;
+        this.userName = userName;
         this.address = address;
         this.emailId = emailId;
         this.contactNo = contactNo;
@@ -87,6 +97,7 @@ public class Customer {
     }
     int customerId;
     String customerName;
+    String userName;
     String address;
     String emailId;
     String contactNo;

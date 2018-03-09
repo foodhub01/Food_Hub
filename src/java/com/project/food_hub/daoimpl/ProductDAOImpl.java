@@ -24,9 +24,9 @@ public class ProductDAOImpl implements ProductDAO{
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement psmt=con.prepareStatement("Insert Product(productname,price,stock) values(?,?,?)");
+            PreparedStatement psmt=con.prepareStatement("Insert into Product(productname,price,stock) values(?,?,?)");
             psmt.setString(1,product.getProductName());
-            psmt.setInt(1,product.getPrice());
+            psmt.setInt(2,product.getPrice());
             psmt.setInt(3,product.getStock());
             count=psmt.executeUpdate();
         } catch (SQLException ex) {

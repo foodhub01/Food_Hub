@@ -24,11 +24,12 @@ public class EmployeeDAOImpl implements EmployeeDAO{
         try {
              Connection con = DBConnection.getConnection();
   
-            PreparedStatement psmt = con.prepareStatement("Insert into Employee(employeeName,designation,employeeContact,employeePassword) Values(?,?,?,?)");
+            PreparedStatement psmt = con.prepareStatement("Insert into Employee(employeeName,username,designation,employeeContact,employeePassword) Values(?,?,?,?,?)");
             psmt.setString(1,employee.getEmployeeName());
-            psmt.setString(2,employee.getDesignation());
-            psmt.setString(3,employee.getEmployeeContact());
-            psmt.setString(4,employee.getEmployeePassword());
+            psmt.setString(2,employee.getUserName());
+            psmt.setString(3,employee.getDesignation());
+            psmt.setString(4,employee.getEmployeeContact());
+            psmt.setString(5,employee.getEmployeePassword());
             count  = psmt.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(EmployeeDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
@@ -37,7 +38,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
     }
 
     @Override
-    public int deleteCustomer(int employeeId) {
+    public int deleteEmployee(int employeeId) {
         int count = 0;
          try {
              Connection con = DBConnection.getConnection();
@@ -61,11 +62,12 @@ public class EmployeeDAOImpl implements EmployeeDAO{
             if(resultSet!=null){
                 while(resultSet.next()){
                     int employeeId = resultSet.getInt(1);
-                    String employeeName = resultSet.getString(2);
+                    String employeeName = resultSet.getString(2);           
+                    String userName = resultSet.getString(3);
                     String designation = resultSet.getString(3);
                     String employeeContact = resultSet.getString(4);
                     String employeePassword = resultSet.getString(5);
-                    Employee employee = new Employee(employeeId,employeeName,designation,employeeContact,employeePassword);
+                    Employee employee = new Employee(employeeId,employeeName,userName,designation,employeeContact,employeePassword);
                     employeeList.add(employee);
                 }
             }
@@ -89,10 +91,11 @@ public class EmployeeDAOImpl implements EmployeeDAO{
                 while(resultSet.next()){
                     int employeeid = resultSet.getInt(1);
                     String employeeName = resultSet.getString(2);
+                    String userName = resultSet.getString(3);
                     String designation = resultSet.getString(3);
                     String employeeContact = resultSet.getString(4);
                     String employeePassword = resultSet.getString(5);
-                    Employee employee = new Employee(employeeid,employeeName,designation,employeeContact,employeePassword);
+                    Employee employee = new Employee(employeeid,employeeName,userName,designation,employeeContact,employeePassword);
                     employeeList.add(employee);
                 }
             }
@@ -111,12 +114,13 @@ public class EmployeeDAOImpl implements EmployeeDAO{
              int count = 0; 
         try {
              Connection con = DBConnection.getConnection();
-             PreparedStatement psmt = con.prepareStatement("update Employee set  employeeName=?,designation=?,employeecontact=?,employeePassword=? where employeeId=?");
+             PreparedStatement psmt = con.prepareStatement("update Employee set  employeeName=?,userName=?,designation=?,employeecontact=?,employeePassword=? where employeeId=?");
              psmt.setString(1,employee.getEmployeeName());
-             psmt.setString(2,employee.getDesignation());
-             psmt.setString(3,employee.getEmployeeContact());
-             psmt.setString(4,employee.getEmployeePassword());
-             psmt.setInt(5,employeeId);
+             psmt.setString(2,employee.getUserName());
+             psmt.setString(3,employee.getDesignation());
+             psmt.setString(4,employee.getEmployeeContact());
+             psmt.setString(5,employee.getEmployeePassword());
+             psmt.setInt(6,employeeId);
              count = psmt.executeUpdate();
          } catch (SQLException ex) {
              Logger.getLogger(EmployeeDAOImpl.class.getName()).log(Level.SEVERE, null, ex);

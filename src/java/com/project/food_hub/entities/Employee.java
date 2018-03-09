@@ -27,6 +27,14 @@ public class Employee {
         this.employeeName = employeeName;
     }
 
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
     public String getDesignation() {
         return designation;
     }
@@ -51,22 +59,25 @@ public class Employee {
         this.employeePassword = employeePassword;
     }
 
-    public Employee(int employeeId, String employeeName, String designation, String employeeContact, String employeePassword) {
+    public Employee(int employeeId, String employeeName,String userName, String designation, String employeeContact, String employeePassword) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
+        this.userName = userName;
         this.designation = designation;
         this.employeeContact = employeeContact;
         this.employeePassword = employeePassword;
     }
 
-    public Employee(String employeeName, String designation, String employeeContact, String employeePassword) {
+    public Employee(String employeeName,String userName, String designation, String employeeContact, String employeePassword) {
         this.employeeName = employeeName;
+        this.userName = userName;
         this.designation = designation;
         this.employeeContact = employeeContact;
         this.employeePassword = employeePassword;
     }
     int employeeId;
     String employeeName;
+    String userName;
     String designation;
     String employeeContact;
     String employeePassword;

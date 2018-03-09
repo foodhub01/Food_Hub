@@ -27,15 +27,16 @@ public class CustomerDAOImpl implements CustomerDAO
         
     try {
         Connection con = DBConnection.getConnection();
-        PreparedStatement preparedstatement = con.prepareStatement("Insert into Customer(customerName,address,emailId,contactNo,BirthDate,password) Values(?,?,?,?,?,?)");
-        preparedstatement.setString(1,customer.getCustomerName());
-        preparedstatement.setString(2,customer.getAddress());
-        preparedstatement.setString(3,customer.getEmailId());
-        preparedstatement.setString(4,customer.getContactNo());
+        PreparedStatement psmt = con.prepareStatement("Insert into Customer(customerName,username,address,emailId,contactNo,BirthDate,password) Values(?,?,?,?,?,?,?)");
+        psmt.setString(1,customer.getCustomerName());
+        psmt.setString(2,customer.getUserName());
+        psmt.setString(3,customer.getAddress());
+        psmt.setString(4,customer.getEmailId());
+        psmt.setString(5,customer.getContactNo());
         java.util.Date date = new java.util.Date(customer.getDate());
-        preparedstatement.setDate(5,new Date(date.getYear(),date.getMonth(),date.getDay()));
-        preparedstatement.setString(6,customer.getPassword());
-        count = preparedstatement.executeUpdate();
+        psmt.setDate(6,new Date(date.getYear(),date.getMonth(),date.getDay()));
+        psmt.setString(7,customer.getPassword());
+        count = psmt.executeUpdate();
     }   catch (SQLException ex) {
         Logger.getLogger(CustomerDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
     }
@@ -70,12 +71,13 @@ public class CustomerDAOImpl implements CustomerDAO
          while(resultSet.next()){
            int customerId = resultSet.getInt(1);
            String customerName = resultSet.getString(2);
-           String address = resultSet.getString(3);
-           String emailId = resultSet.getString(4);
-           String contactNo = resultSet.getString(5);
-           String date = resultSet.getString(6);
-           String password = resultSet.getString(7);
-           Customer customer = new Customer(customerId, customerName, address, emailId, contactNo, date, password);
+           String userName = resultSet.getString(3);
+           String address = resultSet.getString(4);
+           String emailId = resultSet.getString(5);
+           String contactNo = resultSet.getString(6);
+           String date = resultSet.getString(7);
+           String password = resultSet.getString(8);
+           Customer customer = new Customer(customerId, customerName,userName, address, emailId, contactNo, date, password);
            customerList.add(customer);
          }   
         }
@@ -90,7 +92,7 @@ public class CustomerDAOImpl implements CustomerDAO
          List<Customer> customerList = null;
         try {
         Connection con = DBConnection.getConnection();
-        PreparedStatement psmt = con.prepareStatement("select * from Customer where customer_Id=?");
+        PreparedStatement psmt = con.prepareStatement("select * from Customer where customerId=?");
          psmt.setInt(1,customerId);
         ResultSet resultSet = psmt.executeQuery();
         customerList = new ArrayList<Customer>();
@@ -98,12 +100,13 @@ public class CustomerDAOImpl implements CustomerDAO
          while(resultSet.next()){
            int customerid = resultSet.getInt(1);
            String customerName = resultSet.getString(2);
-           String address = resultSet.getString(3);
-           String emailId = resultSet.getString(4);
-           String contactNo = resultSet.getString(5);
-           String date = resultSet.getString(6);
-           String password = resultSet.getString(7);
-           Customer customer = new Customer(customerid, customerName, address, emailId, contactNo, date, password);
+           String userName = resultSet.getString(3);
+           String address = resultSet.getString(4);
+           String emailId = resultSet.getString(5);
+           String contactNo = resultSet.getString(6);
+           String date = resultSet.getString(7);
+           String password = resultSet.getString(8);
+           Customer customer = new Customer(customerid, customerName,userName,address, emailId, contactNo, date, password);
            customerList.add(customer);
          }   
         }
@@ -120,13 +123,15 @@ public class CustomerDAOImpl implements CustomerDAO
          int count = 0;
         try {
           Connection con = DBConnection.getConnection();
-        PreparedStatement psmt = con.prepareStatement("update customer set customerName=?,address=?,emailId=?,contactNo=?,Birthdate=?,password=? where customerId=?");
+        PreparedStatement psmt = con.prepareStatement("update customer set customerName=?,userName=?, address=?,emailId=?,contactNo=?,Birthdate=?,password=? where customerId=?");
         psmt.setString(1,customer.getCustomerName());
-        psmt.setString(2,customer.getAddress());
-        psmt.setString(3,customer.getEmailId());
-        psmt.setString(4,customer.getContactNo());
-        psmt.setString(5,customer.getDate());
-        psmt.setString(6,customer.getPassword());
+        psmt.setString(2,customer.getUserName());
+        psmt.setString(3,customer.getAddress());
+        psmt.setString(4,customer.getEmailId());
+        psmt.setString(5,customer.getContactNo());
+        psmt.setString(6,customer.getDate());
+        psmt.setString(7,customer.getPassword());
+        psmt.setInt(8,customer.getCustomerId());
         count =  psmt.executeUpdate();
         } catch (SQLException ex) {
         Logger.getLogger(CustomerDAOImpl.class.getName()).log(Level.SEVERE, null, ex);

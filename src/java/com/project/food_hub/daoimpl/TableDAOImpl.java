@@ -24,7 +24,7 @@ public class TableDAOImpl implements TableDAO {
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement psmt=con.prepareStatement("Insert mytable(int capacity) values(?)");
+            PreparedStatement psmt=con.prepareStatement("Insert into mastertable(tablecapacity) values(?)");
             psmt.setInt(1,table.getCapacity());
             count=psmt.executeUpdate();
                     
@@ -41,7 +41,7 @@ public class TableDAOImpl implements TableDAO {
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement psmt=con.prepareStatement("Delete from mytable where tableno=?");
+            PreparedStatement psmt=con.prepareStatement("Delete from mastertable where tableno=?");
             psmt.setInt(1, tableNo);
             count=psmt.executeUpdate();
         } catch (SQLException ex) {
@@ -59,7 +59,7 @@ public class TableDAOImpl implements TableDAO {
             
             
             Connection con=DBConnection.getConnection();
-            PreparedStatement psmt=con.prepareStatement("Select * from mytable");
+            PreparedStatement psmt=con.prepareStatement("Select * from mastertable");
             ResultSet resultSet=psmt.executeQuery();
             tableList = new ArrayList<Table>();
             if(resultSet!=null){
@@ -85,7 +85,7 @@ public class TableDAOImpl implements TableDAO {
             
             
             Connection con=DBConnection.getConnection();
-            PreparedStatement psmt=con.prepareStatement("Select * from mytable where tableno=?");
+            PreparedStatement psmt=con.prepareStatement("Select * from mastertable where tableno=?");
             psmt.setInt(1, tableNo);
             ResultSet resultSet=psmt.executeQuery();
             tableList = new ArrayList<Table>();
@@ -110,7 +110,7 @@ public class TableDAOImpl implements TableDAO {
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement psmt=con.prepareStatement("Update mytable set capacity=? where tableno=?;");
+            PreparedStatement psmt=con.prepareStatement("Update mastertable set tablecapacity=? where tableno=?");
             psmt.setInt(1,table.getCapacity() );
             psmt.setInt(2, tableNo);
             count = psmt.executeUpdate();

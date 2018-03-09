@@ -24,13 +24,14 @@ public class OrderDAOImpl implements OrderDAO {
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement psmt = con.prepareStatement("Insert order(int customerId,int productId,int employeeId,int quantity,int billNo,String date)values(?,?,?,?,?,?)");
+            PreparedStatement psmt = con.prepareStatement("Insert into masterorder(customerId,productId,employeeId,quantity,billNo,orderdate)values(?,?,?,?,?,?)");
             psmt.setInt(1,order.getCustomerId());
             psmt.setInt(2,order.getProductId());
             psmt.setInt(3,order.getEmployeeId());
             psmt.setInt(4,order.getQuantity());
             psmt.setInt(5,order.getBillNo());
-            psmt.setString(6,order.getDate());
+            java.util.Date date = new java.util.Date(order.getDate());
+             psmt.setDate(6,new Date(date.getYear(),date.getMonth(),date.getDay()));
             count=psmt.executeUpdate();
         } catch (SQLException ex) {
             Logger.getLogger(OrderDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
@@ -43,7 +44,7 @@ public class OrderDAOImpl implements OrderDAO {
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement psmt = con.prepareStatement("Delete from order where orderId=?");
+            PreparedStatement psmt = con.prepareStatement("Delete from masterorder where orderId=?");
             psmt.setInt(1, orderId);
             count=psmt.executeUpdate();
         } catch (SQLException ex) {
@@ -58,7 +59,7 @@ public class OrderDAOImpl implements OrderDAO {
         try {
            
             Connection con= DBConnection.getConnection();
-            PreparedStatement psmt=con.prepareStatement("Select *from order");
+            PreparedStatement psmt=con.prepareStatement("Select *from masterorder");
             ResultSet resultSet=psmt.executeQuery();
             orderList= new ArrayList<Order>();
             if(resultSet!=null){
@@ -87,7 +88,7 @@ public class OrderDAOImpl implements OrderDAO {
         try {
            
             Connection con= DBConnection.getConnection();
-            PreparedStatement psmt=con.prepareStatement("Select *from order where orderId=?");
+            PreparedStatement psmt=con.prepareStatement("Select *from masterorder where orderId=?");
             psmt.setInt(1, orderId);
             ResultSet resultSet=psmt.executeQuery();
             orderList= new ArrayList<Order>();
@@ -118,7 +119,7 @@ public class OrderDAOImpl implements OrderDAO {
         int count=0;
         try {
             Connection con = DBConnection.getConnection();
-            PreparedStatement psmt = con.prepareStatement("Update order set customerId=?, productId=?,employeeId=?,quantity=?,billno=?,date=? where orderId=? ");
+            PreparedStatement psmt = con.prepareStatement("Update masterorder set customerId=?, productId=?,employeeId=?,quantity=?,billno=?,date=? where orderId=? ");
             psmt.setInt(1,order.getCustomerId());
             psmt.setInt(2,order.getProductId());
             psmt.setInt(3,order.getEmployeeId());
