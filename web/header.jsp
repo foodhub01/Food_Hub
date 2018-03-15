@@ -28,6 +28,7 @@
   
     </head>
     <body>
+       
         <div class ="jumbotron">
         <div class="container text-center">
             <h1>Food Hub</h1>
@@ -49,10 +50,11 @@
                     </ul>
                     
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="signup.jsp"><span class="glyphicon glyphicon-log-in"></span> SIGN UP</a></li>
+                        <li><a href="signup.jsp"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> SIGN IN</a></li>
                     </ul>
             </div>
         </nav>
+         
     </body>
 </html>
