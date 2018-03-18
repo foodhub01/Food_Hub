@@ -18,4 +18,5 @@ public interface CustomerDAO {
     List<Customer> getAllCustomer();
     Customer getCustomerByID (int customerId);
     int updateCustomer(int customerId,Customer customer);
+    boolean isUserValid(String username,String password);
 }

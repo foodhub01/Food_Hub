@@ -8,15 +8,14 @@
 <!DOCTYPE html>
 <%@include file="header.jsp" %>
 <style>
-    .signup{
-        ;
-    }
-    .bg { 
+    
+    .bg {
+        
     
     background-image: url("img/fries.jpeg");
 
     
-    height: 100%; 
+    width: 100%; 
 
    
     background-position: center;
@@ -25,7 +24,7 @@
 }
 </style>
 <body class="bg">
-    
+   
 <div class="signup">
     <center>
 <form action="signup.do" method="post">
@@ -47,5 +46,5 @@
     <br><br>
 </form></center>
 </div>
-</body>
+</body> 
 <%@include file="footer.jsp" %>

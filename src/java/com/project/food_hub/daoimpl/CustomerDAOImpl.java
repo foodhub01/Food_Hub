@@ -139,6 +139,27 @@ public class CustomerDAOImpl implements CustomerDAO
      
     return count;
     }
+
+    public boolean isUserValid(String username, String password) {
+        try {
+            Connection con=DBConnection.getConnection();
+            PreparedStatement psmt = con.prepareStatement("Select * from customer where username=? and password=? ");
+            psmt.setString(1,username);
+            psmt.setString(2, password);
+            
+            
+       ResultSet resultSet = psmt.executeQuery();
+            if(resultSet !=null){
+             return resultSet.next();
+            }
+               
+        }
+        catch (SQLException ex) {
+            Logger.getLogger(EmployeeDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.println("Not Logging In");
+        return false;
+    }
+    }
     
 
-}

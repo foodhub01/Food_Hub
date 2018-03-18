@@ -36,12 +36,12 @@ import java.util.List;
  */
 public class TestApp {
    public static void main(String[] args){
-        CustomerDAO customerDAO = new CustomerDAOImpl();
-        int count = customerDAO.addCustomer(new Customer("Vignesh","vig01","djfjcdiix","vig01@gmail.com","0908787654","1978/08/15","09897654"));
-        if(count>0)System.out.println("Record Added Successfully");
-        else System.out.println("Record Failed to get added"); 
+//        CustomerDAO customerDAO = new CustomerDAOImpl();
+//        int count = customerDAO.addCustomer(new Customer("Vignesh","vig01","djfjcdiix","vig01@gmail.com","0908787654","1978/08/15","09897654"));
+//        if(count>0)System.out.println("Record Added Successfully");
+//        else System.out.println("Record Failed to get added"); 
 ////     
-//       int count=customerDAO.deleteCustomer(100001);
+//       int count=customerDAO.deleteCustomer(100003);
 //       if(count>0)System.out.println("Record Deleted Successfully");
 //       else System.out.println("Record Failed to get deleted");      
 //
