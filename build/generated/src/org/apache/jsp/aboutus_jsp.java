@@ -111,7 +111,7 @@ out.println(session.getAttribute("loginid"));
       out.write("    </body>\r\n");
       out.write("</html>\r\n");
       out.write("\r\n");
-      out.write("name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n");
+      out.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n");
       out.write("<link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\r\n");
       out.write("\r\n");
       out.write("<!-- Page content -->\r\n");
