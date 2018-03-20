@@ -22,7 +22,7 @@
    bottom: 0;
    width: 100%;
    background-color: lightblue;
-   color: white;
+   color: black;
    text-align: center;
       }
   </style>
