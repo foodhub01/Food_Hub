@@ -16,22 +16,28 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
       .navbar{
-          margin-bottom: 0;
+          margin-bottom: 0px;
           border-radius: 0;
       }
       .jumbotron{
          background-color:lightblue; 
+         margin-bottom: 0;
+          
+          
+              
+        
       }
-      
+     
       
   </style>
   
     </head>
     <body>
         <header>
+            <div class="container-fluid">   
         <div class ="jumbotron">
         <div class="container text-center">
-            <h1>Food Hub</h1>
+           <h1>Food Hub</h1>
         </div>
             </div>
         <nav class="navbar navbar-inverse">
@@ -47,15 +53,17 @@
                         <li ><a href="home.jsp">HOME</a></li>
                         <li ><a href ="aboutus.jsp">ABOUT US</a></li>
                         <li ><a href ="contactus.jsp">CONTACT US</a></li>
-                    </ul>
-                    
-                    <ul class="nav navbar-nav navbar-right">
+                        <ul class="nav navbar-nav navbar-right">
                         <li><a href="signup.jsp"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
                         <li><a href="signin.jsp"><span class="glyphicon glyphicon-log-in"></span> SIGN IN</a></li>
-                        <h2><li>Welcome <%out.println(session.getAttribute("loginid")); %></li></h2>
+                        
                     </ul>
+                    </ul>
+                    
+                    
             </div>
         </nav>
+        </div>
          </header>
     </body>
 </html>
