@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.row{
+    max-width:1140px;
+    margin: 0 auto;
+}
+body{
+    font-family: serif;
+}
+.slogan{
+    position: absolute;
+    width: 1080px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/homebg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+h1{
+    color: white;
+}
+.main-nav{
+    list-style: none;
+    float: right;
+    margin-top: 60px;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 20px;
+}
+.main-nav li a{
+    color: white;
+    text-decoration: none;
+    font-size: 90%;
+    font-weight: bold;
+}
+.main-nav li a:hover{
+    color: orange;
+    border-bottom: 2px solid whitesmoke;
+    transition: all 0.3s ease-in;
+    padding: 6px 0;
+    
+}
+.logo{
+    height: 100px;
+    float: left;
+    margin-top: 30px;
+}
+.btn{
+    border: 1px solid #e9ecef;
+    padding: 10px 30px;
+    color: lightsalmon;
+    text-decoration: none;
+    border-radius: 12px;
+    margin-right: 12px;
+}
+.quick_button{
+    margin-top: 50px;
+    
+}
+.btn-half{
+    background-color: orange;
+    color: white;
+}
+.btn-full:hover{
+    background-color: orange;
+    color: white;
+    transition:all 0.2s ease-in;
+}
+
+
