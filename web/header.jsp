@@ -53,6 +53,7 @@
                         <li ><a href="home.jsp">HOME</a></li>
                         <li ><a href ="aboutus.jsp">ABOUT US</a></li>
                         <li ><a href ="contactus.jsp">CONTACT US</a></li>
+                        <li ><a href ="product.do">Product</a></li>
                         <ul class="nav navbar-nav navbar-right">
                         <li><a href="signup.jsp"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
                         <li><a href="signin.jsp"><span class="glyphicon glyphicon-log-in"></span> SIGN IN</a></li>

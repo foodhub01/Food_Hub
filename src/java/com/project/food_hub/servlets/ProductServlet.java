@@ -42,7 +42,7 @@ public class ProductServlet extends HttpServlet {
             System.out.println("No of Records " + productList.size());
             if(productList.size()>0){
                 request.setAttribute("productList", productList);
-                RequestDispatcher rd = request.getRequestDispatcher("productlist.jsp");
+                RequestDispatcher rd = request.getRequestDispatcher("product.jsp");
                 rd.forward(request, response);
         }
         }

@@ -125,10 +125,10 @@ public class TestApp {
 //   
    
 //   
-//        ProductDAO productDAO = new ProductDAOImpl();
-//        int count = productDAO.addProduct(new Product("Pasta",120,100));
-//        if(count>0)System.out.println("Record Added Successfully");
-//        else System.out.println("Record Failed to get added");
+        ProductDAO productDAO = new ProductDAOImpl();
+        int count = productDAO.addProduct(new Product("Pasta",120,100));
+        if(count>0)System.out.println("Record Added Successfully");
+        else System.out.println("Record Failed to get added");
 //        
 //       int  count= productDAO.deleteProduct(2);
 //        if(count>0)System.out.println("Record Deleted Successfully");

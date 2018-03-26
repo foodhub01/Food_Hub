@@ -3,12 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Project/Food_Hub/web/aboutus.jsp</file>
-            <file>file:/D:/Project/Food_Hub/web/Web-Inf/web.xml</file>
+            <file>file:/D:/Project/Food_Hub/src/java/com/project/food_hub/daoimpl/ProductDAOImpl.java</file>
+            <file>file:/D:/Project/Food_Hub/src/java/com/project/food_hub/servlets/ProductServlet.java</file>
             <file>file:/D:/Project/Food_Hub/web/header.jsp</file>
-            <file>file:/D:/Project/Food_Hub/web/signup.jsp</file>
-            <file>file:/D:/Project/Food_Hub/web/signin.jsp</file>
-            <file>file:/D:/Project/Food_Hub/web/contactus.jsp</file>
+            <file>file:/D:/Project/Food_Hub/web/product.jsp</file>
         </group>
     </open-files>
 </project-private>
