@@ -9,6 +9,7 @@
 body{
     font-family: serif;
 }
+
 .slogan{
     position: absolute;
     width: 1080px;
@@ -17,30 +18,37 @@ body{
     transform: translate(-50%,-50%);
 }
 header{
-    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(img/homebg.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("img/homebg.jpg");
     height: 100vh;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
 }
 h1{
     color: white;
 }
-.main-nav{
+.nav{
     list-style: none;
-    float: right;
+<<<<<<< HEAD
+    float: right;  
+    margin-top: 50px;
+  
+=======
+    
     margin-top: 60px;
+>>>>>>> 1d1fc60899807909a12f609b941cea901cb28618
 }
-.main-nav li{
+.nav li{
     display: inline-block;
     margin-left: 20px;
 }
-.main-nav li a{
+.nav li a{
     color: white;
     text-decoration: none;
     font-size: 90%;
     font-weight: bold;
 }
-.main-nav li a:hover{
+.nav li a:hover{
     color: orange;
     border-bottom: 2px solid whitesmoke;
     transition: all 0.3s ease-in;
@@ -74,4 +82,82 @@ h1{
     transition:all 0.2s ease-in;
 }
 
+.meal-list{
+    list-style: none;
+    width: 100%
+}
 
+.meal-list li{
+    display: block;    
+    width: 25%;
+    float: left;
+        
+    }
+.meal-photo{
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+.meal-photo img{
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition:transform 0.5s;
+}
+.meal-photo img:hover{
+    transform: scale(1.05);
+}
+.meal{
+    margin-top: 60px;
+}
+.info{
+    margin-top:25px;
+    margin-bottom: 70px;
+}
+h2{
+    
+    text-align: center;
+}
+h2:after{
+    width: 100px;
+    height: 2px;
+    background-color:brown ;
+    display: block;
+    content:" ";
+    margin: 0 auto;
+    margin-top: 10px;
+     
+}
+.cities{
+    margin-top: 50px;
+}
+.cities img{
+    width: 100%;
+    margin-top: 30px;
+}
+.navbar{
+          margin-bottom: 0;
+          border-radius: 0;
+      }
+      
+      .btn-block{
+          background-color: orange;
+          color: white;
+          border-radius: 4px;
+          margin-top: 20px;
+      }
+      .gap{
+          margin-top: 40px;
+      }
+      .form{
+          margin-top: 40px;
+      }
+      #login-name{
+          font-size: 65px; font-family: fantasy;
+          border-bottom-style: ridge;
+          color: white;
+      }
+      #login{
+          background-color: gray;
+          min-height: 500px;
+      }
