@@ -27,31 +27,22 @@ header{
 h1{
     color: white;
 }
-.nav{
+.main-nav{
     list-style: none;
-<<<<<<< HEAD
-<<<<<<< HEAD
     float: right;  
     margin-top: 50px;
-  
-=======
-=======
->>>>>>> 1d1fc60899807909a12f609b941cea901cb28618
-    
-    margin-top: 60px;
->>>>>>> 1d1fc60899807909a12f609b941cea901cb28618
-}
-.nav li{
+    }
+.main-nav li{
     display: inline-block;
     margin-left: 20px;
 }
-.nav li a{
+.main-nav li a{
     color: white;
     text-decoration: none;
     font-size: 90%;
     font-weight: bold;
 }
-.nav li a:hover{
+.main-nav li a:hover{
     color: orange;
     border-bottom: 2px solid whitesmoke;
     transition: all 0.3s ease-in;

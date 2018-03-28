@@ -126,7 +126,7 @@ public class TestApp {
    
 //   
         ProductDAO productDAO = new ProductDAOImpl();
-        int count = productDAO.addProduct(new Product("Pasta",120,100));
+        int count = productDAO.addProduct(new Product("tea",20,100));
         if(count>0)System.out.println("Record Added Successfully");
         else System.out.println("Record Failed to get added");
 //        
@@ -139,10 +139,10 @@ public class TestApp {
 //        if(count>0)System.out.println("Record Updated Successfully");
 //        else System.out.println("Record Failed to get updated");
 //        
-//        List<Product> productlist = productDAO.getAllProduct();
-//        for(Product pro : productlist){
-//            System.out.println(pro.getProductId() + "|" + pro.getProductName() + "|" + pro.getPrice());
-//        }
+        List<Product> productlist = productDAO.getAllProduct();
+        for(Product pro : productlist){
+            System.out.println(pro.getProductId() + "|" + pro.getProductName() + "|" + pro.getPrice());
+        }
 //        Product pro = productDAO.getProductById(1);
 //        System.out.println(pro.getProductId() + "|" + pro.getProductName() + "|" + pro.getPrice());
    
@@ -168,7 +168,7 @@ public class TestApp {
 //       TableBooking tab = tablebookingDAO.getTableBookingById(1);
 //          System.out.println(tab.getBookTableId() + "|" + tab.getCustomerId() + "|" + tab.getTableNo());
         
-        FloorDAO floorDAO = new FloorDAOImpl();
+//        FloorDAO floorDAO = new FloorDAOImpl();
 //          int count = floorDAO.addFloor(new Floor(100));
 //          if(count>0)System.out.println("Record Added Successfully");
 //          else System.out.println("Record Failed to get added");

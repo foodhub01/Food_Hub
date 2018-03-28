@@ -16,12 +16,23 @@
         <link rel="stylesheet" href="css/fontawesome.min.css">
         <script src="js/bootstrap.min.js"></script>
         <style>
-            .login-bg{ background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/homebg.jpg);
+            .login-bg{ background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(img/homebg.jpg);
     height: 100vh;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;}
-        
+    background-attachment: fixed;
+    top:50%;
+bottom:80%;        
+    left: 70%;
+    position:absolute;
+    transform: translate(-50% , -50%);
+    width:75%;
+    opacity: 0.9;
+            
+            
+            }
+    
+    
 
   </style>
     </head>

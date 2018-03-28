@@ -17,7 +17,6 @@
     <th>Stock</th>
     </thead>
     <tbody>
-    <input type="hidden" name="productList" value="${productList}" />
       
         <%--<c:if test="not employeeList equals  null" var="emp">--%>
         <c:forEach  var="product" items="${productList}">

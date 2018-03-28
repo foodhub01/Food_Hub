@@ -26,11 +26,11 @@
                 </div>
                 
                 <ul class="main-nav">
-                    <li><a href="home.jsp">HOME</a></li>
+                    <li><a href="">HOME</a></li>
                     <li><a href="aboutusex.jsp">ABOUT US</a></li>
                     <li><a href="contactusex.jsp">CONTACT US</a></li>
                     <li><a href="signup.jsp">SIGN UP</a></li>
-                    <li><a href="signin.jsp">SIGN IN</a></li>
+                    <li><a href="ex.jsp">SIGN IN</a></li>
                 </ul>
             </div>
             <div class="container-fluid">

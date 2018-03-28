@@ -16,6 +16,10 @@
         <servlet-name>ProductServlet1</servlet-name>
         <servlet-class>com.project.food_hub.servlets.ProductServlet1</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>EditProductServlet</servlet-name>
+        <servlet-class>com.project.food_hub.servlets.EditProductServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SignUpServlet</servlet-name>
         <url-pattern>/signup.do</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>ProductServlet1</servlet-name>
         <url-pattern>/product.view</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditProductServlet</servlet-name>
+        <url-pattern>/editproduct.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

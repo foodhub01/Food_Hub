@@ -5,10 +5,11 @@
 --%>
 
 <%@page import="com.project.food_hub.entities.Product"%>
+<%@page import="com.project.food_hub.daoimpl.ProductDAOImpl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-%@page import="com.project.food_hub.entities.Product"%>
-<%@page import="com.project.food_hub.daoimpl.ProductDAOImpl"%>
+
+
 
 <%@include file="header.jsp" %>
 <p>
@@ -16,7 +17,7 @@
 <form action="editproduct.do" method="get">
 
 <%
-Product product = new ProductDAOImpl().getProductById(Integer.parseInt(request.getParameter("productid")));
+Product product = new ProductDAOImpl().getProductById(Integer.parseInt(request.getParameter("productId")));
 request.setAttribute("product",product);
 %>
 <input type="hidden" name="productid" value="${product.productId}" />
