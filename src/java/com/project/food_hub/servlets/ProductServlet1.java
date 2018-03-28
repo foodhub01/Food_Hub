@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Vedant
  */
-public class ProductServlet extends HttpServlet {
+public class ProductServlet1 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,13 +37,14 @@ public class ProductServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            ProductDAO productDAO = new ProductDAOImpl ();
+             ProductDAO productDAO = new ProductDAOImpl ();
             List<Product> productList = productDAO.getAllProduct();
-            System.out.println("No of Records " + productList.size());
+            
             if(productList.size()>0){
                 request.setAttribute("productList", productList);
                 RequestDispatcher rd = request.getRequestDispatcher("product.jsp");
                 rd.forward(request, response);
+                System.out.println("No of Records " + productList.size());
         }
         }
     }

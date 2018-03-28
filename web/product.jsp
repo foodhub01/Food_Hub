@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <%@include file="header.jsp" %>
 <h2>List of Product</h2>
@@ -21,17 +22,16 @@
         <%--<c:if test="not employeeList equals  null" var="emp">--%>
         <c:forEach  var="product" items="${productList}">
              <tr>
-            <td><c:out value="${product.productID}"/></td>
+            <td><c:out value="${product.productId}"/></td>
             <td><c:out value="${product.productName}"/></td>
             <td><c:out value="${product.price}"/></td>
             <td><c:out value="${product.stock}"/></td>
-            <!--<td><a href="editemployee.jsp?empid=${employee.employeeID}">Details</a></td>-->
+            <td><a href="Editproduct.jsp?productId=${product.productId}">Details</a></td>
             
-            <!--<td><a href="editemployee.jsp?empid=${employee.employeeID}">Delete</a></td>-->
         </tr>
         </c:forEach>
-        <%--</c:if>--%>
-        <c:if test="${empty productList}" var="product">
+       
+        <c:if test="${empty productList}" var="pro">
             <%out.println("No record");%>
         </c:if>
     </tbody>
