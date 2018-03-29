@@ -45,7 +45,7 @@
     <br>
     Password:<input class="form-control" type="password" placeholder="Password" name="password"/>
     <br><center>
-        <input type="submit" value="Login" style="background-color: lightseagreen"; height="10px"; width="20px"; size="50px"/></center>
+        <input type="submit" value="Login" style="background-color: lightseagreen" height="10px" width="20px" size="50px"/></center>
     <br>
     
 </form>

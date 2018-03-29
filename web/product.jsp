@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <%@include file="header.jsp" %>
 <h2>List of Product</h2>
+   
 <table border="1">
     <thead >
     <th>Product ID</th>

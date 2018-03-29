@@ -18,9 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author RaHuL
+ * @author Vedant
  */
-public class EditProductServlet extends HttpServlet {
+public class AddProductServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,39 +36,25 @@ public class EditProductServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            int productid;
-            
-            String action = request.getParameter("action");
-            
-            productid = Integer.parseInt(request.getParameter("productid"));
+            String productname;
+            int price;
+            int stock;
+            productname=request.getParameter("productname");
+            price=Integer.parseInt(request.getParameter("price"));
+            stock=Integer.parseInt(request.getParameter("stock"));
             ProductDAO productDAO = new ProductDAOImpl();
-            int count = 0;
-            if(action.equals("Save Changes")){
-               String productName;
-               int price;
-               int stock;    
-               productName = request.getParameter("productName");
-               price = Integer.parseInt(request.getParameter("price"));
-               stock = Integer.parseInt(request.getParameter("stock"));
-                
-                count = productDAO.updateProduct(productid,new Product(productName,price,stock));
-                }
-            else if(action.equals("Delete")){
-                count = productDAO.deleteProduct(productid);
-            }
+            int count = productDAO.addProduct(new Product(productname,price,stock));
              RequestDispatcher rd = null;
             if(count>0){
                rd = request.getRequestDispatcher("product.view");
             }
             else{
-                rd = request.getRequestDispatcher("product.jsp?producttId="+productid);
+                rd = request.getRequestDispatcher("addproduct.jsp");
             }
-            rd.include(request,response);
+            rd.forward(request,response);
+            
         }
     }
-
-        
-    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

@@ -155,7 +155,7 @@ public class CustomerDAOImpl implements CustomerDAO
                
         }
         catch (SQLException ex) {
-            Logger.getLogger(EmployeeDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(CustomerDAOImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("Not Logging In");
         return false;

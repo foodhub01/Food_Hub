@@ -6,7 +6,9 @@
 package com.project.food_hub.servlets;
 
 import com.project.food_hub.dao.CustomerDAO;
+import com.project.food_hub.dao.EmployeeDAO;
 import com.project.food_hub.daoimpl.CustomerDAOImpl;
+import com.project.food_hub.daoimpl.EmployeeDAOImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -41,13 +43,20 @@ public class SignInServlet extends HttpServlet {
             username= request.getParameter("username");
             password=request.getParameter("password");
             CustomerDAO customerDAO = new CustomerDAOImpl();
+            EmployeeDAO employeeDAO = new EmployeeDAOImpl();
             RequestDispatcher rd = null;
             if(customerDAO.isUserValid(username, password)){
                 HttpSession session = request.getSession();
                 session.setAttribute("loginid", username);
                 rd = request.getRequestDispatcher("home.jsp");
+                
             }
-            else{
+            else if (employeeDAO.isUserValid(username, password)){
+                 HttpSession session = request.getSession();
+                session.setAttribute("loginid", username);
+                rd = request.getRequestDispatcher("home.jsp"); 
+            }
+            else {
                 rd = request.getRequestDispatcher("signin.jsp");
             }
             rd.forward(request, response);

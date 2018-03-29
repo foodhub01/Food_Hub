@@ -79,10 +79,10 @@ public class TestApp {
 //          System.out.println(t.getTableNo() +"|"+ t.getCapacity());
 
 
-//          EmployeeDAO employeeDAO = new EmployeeDAOImpl();
-//        int count = employeeDAO.addEmployee(new Employee("vedan02","vedan01","Restaurant Manager","8274382930","02938476"));
-//        if(count>0)System.out.println("Record Added Successfully");
-//        else System.out.println("Record Failed to get added");
+          EmployeeDAO employeeDAO = new EmployeeDAOImpl();
+        int count = employeeDAO.addEmployee(new Employee("Sagar","sagarj0","Restaurant Manager","8274382931","sagarjo123"));
+        if(count>0)System.out.println("Record Added Successfully");
+        else System.out.println("Record Failed to get added");
 //        
 //       int count=employeeDAO.deleteEmployee(500001);
 //        if(count>0)System.out.println("Record Deleted Successfully");
@@ -93,10 +93,10 @@ public class TestApp {
 //        if(count>0)System.out.println("Record Updated Successfully");
 //        else System.out.println("Record Failed to get updated");
 //
-//        List<Employee> employeelist = employeeDAO.getAllEmployee();
-//        for(Employee emp : employeelist){
-//            System.out.println(emp.getEmployeeId() + "|" + emp.getEmployeeName() + "|" + emp.getDesignation());
-//        }
+        List<Employee> employeelist = employeeDAO.getAllEmployee();
+        for(Employee emp : employeelist){
+            System.out.println(emp.getEmployeeId() + "|" + emp.getEmployeeName() + "|" + emp.getDesignation());
+        }
 //        
 //        Employee emp = employeeDAO.getEmployeeById(500003);
 //            System.out.println(emp.getEmployeeId() + "|" + emp.getEmployeeName() + "|" + emp.getEmployeeContact());
@@ -124,25 +124,25 @@ public class TestApp {
 //         System.out.println(or.getOrderId() + "|" + or.getProductId() + "|" + or.getQuantity());
 //   
    
-//   
-        ProductDAO productDAO = new ProductDAOImpl();
-        int count = productDAO.addProduct(new Product("tea",20,100));
-        if(count>0)System.out.println("Record Added Successfully");
-        else System.out.println("Record Failed to get added");
-//        
-//       int  count= productDAO.deleteProduct(2);
-//        if(count>0)System.out.println("Record Deleted Successfully");
-//        else System.out.println("Record Failed to get deleted");
-//        
-//        Product product = new Product("water",15,90);
-//       int count= productDAO.updateProduct(1, product);
-//        if(count>0)System.out.println("Record Updated Successfully");
-//        else System.out.println("Record Failed to get updated");
-//        
-        List<Product> productlist = productDAO.getAllProduct();
-        for(Product pro : productlist){
-            System.out.println(pro.getProductId() + "|" + pro.getProductName() + "|" + pro.getPrice());
-        }
+////   
+//        ProductDAO productDAO = new ProductDAOImpl();
+//        int count = productDAO.addProduct(new Product("tea",20,100));
+//        if(count>0)System.out.println("Record Added Successfully");
+//        else System.out.println("Record Failed to get added");
+////        
+////       int  count= productDAO.deleteProduct(2);
+////        if(count>0)System.out.println("Record Deleted Successfully");
+////        else System.out.println("Record Failed to get deleted");
+////        
+////        Product product = new Product("water",15,90);
+////       int count= productDAO.updateProduct(1, product);
+////        if(count>0)System.out.println("Record Updated Successfully");
+////        else System.out.println("Record Failed to get updated");
+////        
+//        List<Product> productlist = productDAO.getAllProduct();
+//        for(Product pro : productlist){
+//            System.out.println(pro.getProductId() + "|" + pro.getProductName() + "|" + pro.getPrice());
+//        }
 //        Product pro = productDAO.getProductById(1);
 //        System.out.println(pro.getProductId() + "|" + pro.getProductName() + "|" + pro.getPrice());
    
