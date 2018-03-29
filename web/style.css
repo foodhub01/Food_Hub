@@ -1,0 +1,40 @@
+ .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    body{
+         background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("img/homebg.jpg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    .jumbotron{
+        margin-bottom: 0;
+    }
+    .navbar{
+    list-style: none;
+    float: right;  }
+    
+.navbar li{
+    display: inline-block;
+    margin-left: 20px;
+}
+.navbar li a{
+    color: white;
+    text-decoration: none;
+    font-size: 90%;
+    font-weight: bold;
+}
+.navbar li a:hover{
+    color: orange;
+    border-bottom: 2px solid whitesmoke;
+    transition: all 0.3s ease-in;
+    padding: 6px 0;
+}
+
+.logo{
+    height: 100px;
+    float: left;
+    margin-top: 30px;
+}
