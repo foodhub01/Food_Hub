@@ -21,18 +21,18 @@
     left: 0;
    bottom: 0;
    width: 100%;
-   background-color: lightblue;
-   color: black;
    text-align: center;
       }
      
   </style>
     </head>
     <body>
-          <div class="footer">
-        <footer class="container-fluid">
-            <p>Food_hub@copyright.reserved</p>
-        </footer>
+          
+        <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p>Copyright &copy;<a href="">FOOD HUB</a>, by <a href="">@foodhub</a>.</p>
         </div>
+      </footer>
+        
     </body>
 </html>

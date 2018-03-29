@@ -15,40 +15,42 @@
         <link href="css/bootstrap-grid.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/fontawesome.min.css">
         <script src="js/bootstrap.min.js"></script>
-        <style>
-            .login-bg{ background-image:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(img/homebg.jpg);
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-            top:50%;
-bottom:80%;        
-    left: 75%;
-    position:absolute;
-    transform: translate(-50% , -50%);
-    width:80%;
-    opacity: 0.9;}
-        </style>
-    </head>
-    <body class="login-bg">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <body>
         <div class="container">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4">
-                <div class="jumbotron" style="margin-top: 150px">
-                    <h3><center>Log in</center></h3> 
-                    <form action="signin.do" method="post">
+            
+            <div class="col-md-6">
+                    <div class="jumbotron" style="margin-top: 30px; position: inherit">
+                    <h3><center>Place your order</center></h3> 
+                    <div class="container">
+                                                
+  <div class="dropdown">
+      Choose item :
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" >
+      Select item
+      </button><br>  
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">item 1</a>
+      <a class="dropdown-item" href="#">item 2</a>
+      <a class="dropdown-item" href="#">item 3</a>
+      Quantity : <input class="form-control" type="range" name="address"/>
+      
+      
+    </div>
+  </div>
+</div>
                         <div class="form-group"><br>
-    Username:<input class="form-control" type="text" placeholder="UserName" name="username"/>
-    <br>
-    Password:<input class="form-control" type="password" placeholder="Password" name="password"/>
-    <br>
-        <button type="submit" class="btn btn-primary form-control">Log In</button>
+    
+        <button type="submit" class="btn btn-primary form-control">Continue</button>
         
                         </div>
                     </form>
-                </div>
-            </div>
-            <div class="col-lg-4"></div>
+            </div> </div>
+            
+            
         </div>
     </body>
 </html>
