@@ -32,10 +32,10 @@
         <li><a href="#">profile</a></li>
         <li><a href="#">Order</a></li>
         <li><a href="#">Book</a></li>
-        <li><a href="#">search braches</a></li>
+        <li><a href="#">Search branches</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign out</a></li>
+        <li><a href="home.jsp"><span class="glyphicon glyphicon-log-in"></span> Sign out</a></li>
       </ul>
     </div>
   </div>

@@ -41,12 +41,8 @@ bottom:80%;
     Username:<input class="form-control" type="text" placeholder="UserName" name="username"/>
     <br>
     Password:<input class="form-control" type="password" placeholder="Password" name="password"/>
-<<<<<<< HEAD
     <br><center>
-        <input type="submit" value="Login" style="background-color: lightseagreen" height="10px" width="20px" size="50px"/></center>
-=======
->>>>>>> d5258f646a434967b13694256591c519747348a6
-    <br>
+       
         <button type="submit" class="btn btn-primary form-control">Log In</button>
         
                         </div>
