@@ -16,23 +16,19 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
 
-      .footer{
-          
-    left: 0;
-   bottom: 0;
-   width: 100%;
-   text-align: center;
-      }
-     
+      
   </style>
     </head>
     <body>
           
-        <footer class="mastfoot mt-auto">
-        <div class="inner">
-            <p>Copyright &copy;<a href="">FOOD HUB</a>, by <a href="">@foodhub</a>.</p>
-        </div>
-      </footer>
+         <!-- Footer -->
+    <footer class="bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Food Hub 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
         
     </body>
 </html>

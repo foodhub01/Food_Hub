@@ -80,7 +80,7 @@ public class TestApp {
 
 
           EmployeeDAO employeeDAO = new EmployeeDAOImpl();
-        int count = employeeDAO.addEmployee(new Employee("Sagar","sagarj0","Restaurant Manager","8274382931","sagarjo123"));
+        int count = employeeDAO.addEmployee(new Employee("rahul","rahul12","Bill Manager","82743829300","987654321"));
         if(count>0)System.out.println("Record Added Successfully");
         else System.out.println("Record Failed to get added");
 //        

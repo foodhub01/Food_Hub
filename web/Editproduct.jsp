@@ -11,11 +11,13 @@
 
 
 
-<%@include file="header.jsp" %>
-<p>
-    
-<form action="editproduct.do" method="get">
+<html>
+<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+</head>    <body>
 
+<form action="editproduct.do" method="get">
 <%
 Product product = new ProductDAOImpl().getProductById(Integer.parseInt(request.getParameter("productId")));
 request.setAttribute("product",product);
@@ -30,5 +32,6 @@ request.setAttribute("product",product);
             <input type="submit" name="action" value="Save Changes" />
             <input type="submit" name="action"  value="Delete" />
         </form>
-   </p>
-<%@include file="footer.jsp" %>
+       <body>
+
+</html>

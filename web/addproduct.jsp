@@ -6,7 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<%@include file="header.jsp" %>
  <form action="addproduct.do" method="post">
                         <div class="form-group"><br>
      Product Name:<input class="form-control" type="text" placeholder="Product Name" name="productname" required/>
@@ -20,4 +19,3 @@
         
                         </div>
                     </form>
-<%@include file="footer.jsp" %>

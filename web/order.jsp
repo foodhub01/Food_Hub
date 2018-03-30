@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ex
-    Created on : Mar 25, 2018, 4:48:17 PM
+    Document   : order
+    Created on : Mar 29, 2018, 8:04:32 PM
     Author     : RaHuL
 --%>
 
@@ -36,10 +36,16 @@
       <a class="dropdown-item" href="#">item 1</a>
       <a class="dropdown-item" href="#">item 2</a>
       <a class="dropdown-item" href="#">item 3</a>
-      Quantity : <input class="form-control" type="range" name="address"/>
-      
-      
     </div>
+        <form class="form-inline" action="/action_page.php">
+    <label for="email">Quantity:</label>
+    <input type="text" class="dropdown-toggle-split" data-toggle="dropdown"/>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">1</a>
+      <a class="dropdown-item" href="#">2</a>
+      <a class="dropdown-item" href="#">3</a>
+    </div>
+       </form>
   </div>
 </div>
                         <div class="form-group"><br>

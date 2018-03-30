@@ -17,29 +17,103 @@
   <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar" >
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
+        <div class="row">
+                <div class="logo">
+                    <h1>FoodHub</h1>
+                </div>
+               
+                <ul class="main-nav">
         <li><a href="#">Home</a></li>
         <li><a href="#">profile</a></li>
-        <li><a href="#">Order</a></li>
+        <li><a href="order.jsp">Order</a></li>
         <li><a href="#">Book</a></li>
+<<<<<<< HEAD
         <li><a href="#">Search branches</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="home.jsp"><span class="glyphicon glyphicon-log-in"></span> Sign out</a></li>
+=======
+        <li><a href="product.view">product</a></li>
+        <li><a href="#">Employee</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign out</a></li>
+>>>>>>> 4d75db890f1102757310c378c5eba9fdc0e56da9
       </ul>
-    </div>
-  </div>
-</nav>
-        
+                </ul>
+            </div>
+     
+      <!-- Portfolio Section -->
+      <h2 class="text-center" style="color: white">Speacialist of the day</h2>
+
+      <div class="row">
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+              <img class="card-img-top" src="img/chicken_fries.jpg" alt="" style="width: 100%"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a>Project One</a>
+              </h4>
+              <p class="card-text"></div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+              <img class="card-img-top" src="img/Idly.jpg" alt="" style="width: 100%"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Two</a>
+              </h4>
+              <p class="card-text"></div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+              <img class="card-img-top" src="img/fries.jpeg" alt="" style="width: 100%"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Three</a>
+              </h4>
+              <p class="card-text"> </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+              <img class="card-img-top" src="img/pizza.jpg" alt="" style="width: 100%"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Four</a>
+              </h4>
+              <p class="card-text"> </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+              <img class="card-img-top" src="img/cake.jpg" alt="" style="width: 100%"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Five</a>
+              </h4>
+              <p class="card-text"> </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item">
+          <div class="card h-100">
+              <img class="card-img-top" src="img/pexels-photo-461198.jpeg" alt=""style="width: 100%"></a>
+            <div class="card-body">
+              <h4 class="card-title">
+                <a href="#">Project Six</a>
+              </h4>
+              <p class="card-text"> </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.row -->
+    
+       
     </body>
+    <footer class="bg-dark">
+      <div class="container">
+          <p class=" text-center" style="color: whitesmoke">Copyright &copy; Food Hub 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 </html>

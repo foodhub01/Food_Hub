@@ -19,7 +19,7 @@ public class DBConnection {
     public static Connection getConnection(){
         Connection con = null;
         try {
-            con = DriverManager.getConnection("jdbc:derby://localhost:1527/Food_Hub","Food_Hub","Food_Hub");
+            con = DriverManager.getConnection("jdbc:derby://localhost:1527/FoodHub","FoodHub","FoodHub");
             System.out.println("---Connection Successful---");
         } catch (SQLException ex) {
                         System.out.println("---Connection Failed---");

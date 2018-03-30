@@ -48,13 +48,13 @@ public class SignInServlet extends HttpServlet {
             if(customerDAO.isUserValid(username, password)){
                 HttpSession session = request.getSession();
                 session.setAttribute("loginid", username);
-                rd = request.getRequestDispatcher("home.jsp");
+                rd = request.getRequestDispatcher("welcome.jsp");
                 
             }
             else if (employeeDAO.isUserValid(username, password)){
                  HttpSession session = request.getSession();
                 session.setAttribute("loginid", username);
-                rd = request.getRequestDispatcher("home.jsp"); 
+                rd = request.getRequestDispatcher("welcome.jsp"); 
             }
             else {
                 rd = request.getRequestDispatcher("signin.jsp");
