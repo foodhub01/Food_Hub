@@ -44,14 +44,14 @@ public class EditProductServlet extends HttpServlet {
             ProductDAO productDAO = new ProductDAOImpl();
             int count = 0;
             if(action.equals("Save Changes")){
-               String productName;
+               String productname;
                int price;
                int stock;    
-               productName = request.getParameter("productName");
+               productname = request.getParameter("productname");
                price = Integer.parseInt(request.getParameter("price"));
                stock = Integer.parseInt(request.getParameter("stock"));
                 
-                count = productDAO.updateProduct(productid,new Product(productName,price,stock));
+                count = productDAO.updateProduct(productid,new Product(productname,price,stock));
                 }
             else if(action.equals("Delete")){
                 count = productDAO.deleteProduct(productid);
