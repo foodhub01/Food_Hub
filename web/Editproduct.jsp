@@ -14,10 +14,10 @@
 <html>
 <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Food_Hub</title>
 </head>    <body>
 
-<form action="editproduct.do" method="get">
+<form action="editproduct.do" method="post">
 <%
 Product product = new ProductDAOImpl().getProductById(Integer.parseInt(request.getParameter("productId")));
 request.setAttribute("product",product);

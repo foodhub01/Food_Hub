@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-         <title>welcome to foodhub</title>
+         <title>welcome to Food_Hub</title>
         <meta charset=UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -24,25 +24,20 @@
                
                 <ul class="main-nav">
         <li><a href="#">Home</a></li>
-        <li><a href="#">profile</a></li>
+        <li><a href="#">Profile</a></li>
         <li><a href="order.jsp">Order</a></li>
-        <li><a href="#">Book</a></li>
-<<<<<<< HEAD
-        <li><a href="#">Search branches</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Book.jsp">Book</a></li>
+        <li><a href="product.view">Product</a></li>
+        <li><a href="employeelist.do">Employee</a></li>
         <li><a href="home.jsp"><span class="glyphicon glyphicon-log-in"></span> Sign out</a></li>
-=======
-        <li><a href="product.view">product</a></li>
-        <li><a href="#">Employee</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign out</a></li>
->>>>>>> 4d75db890f1102757310c378c5eba9fdc0e56da9
+        
+        
       </ul>
                 </ul>
             </div>
      
       <!-- Portfolio Section -->
-      <h2 class="text-center" style="color: white">Speacialist of the day</h2>
+      <h2 class="text-center" style="color: white">Specialist of the day</h2>
 
       <div class="row">
         <div class="col-lg-4 col-sm-6 portfolio-item">
@@ -50,7 +45,7 @@
               <img class="card-img-top" src="img/chicken_fries.jpg" alt="" style="width: 100%"></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a>Project One</a>
+                <a style="color: whitesmoke">Non Veg</a>
               </h4>
               <p class="card-text"></div>
           </div>
@@ -60,7 +55,7 @@
               <img class="card-img-top" src="img/Idly.jpg" alt="" style="width: 100%"></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Two</a>
+                <a href="#" style="color: whitesmoke">South Indian</a>
               </h4>
               <p class="card-text"></div>
           </div>
@@ -70,7 +65,7 @@
               <img class="card-img-top" src="img/fries.jpeg" alt="" style="width: 100%"></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Three</a>
+                <a href="#" style="color: whitesmoke">Snacks</a>
               </h4>
               <p class="card-text"> </div>
           </div>
@@ -80,7 +75,7 @@
               <img class="card-img-top" src="img/pizza.jpg" alt="" style="width: 100%"></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Four</a>
+                <a href="#" style="color: whitesmoke">Pizza's</a>
               </h4>
               <p class="card-text"> </div>
           </div>
@@ -90,7 +85,7 @@
               <img class="card-img-top" src="img/cake.jpg" alt="" style="width: 100%"></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Five</a>
+                <a href="#" style="color: whitesmoke">Dessert</a>
               </h4>
               <p class="card-text"> </div>
           </div>
@@ -100,7 +95,7 @@
               <img class="card-img-top" src="img/pexels-photo-461198.jpeg" alt=""style="width: 100%"></a>
             <div class="card-body">
               <h4 class="card-title">
-                <a href="#">Project Six</a>
+                <a href="#" style="color: whitesmoke">Shawarma</a>
               </h4>
               <p class="card-text"> </div>
           </div>
