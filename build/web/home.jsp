@@ -36,7 +36,7 @@
             <div class="slogan">
                 <h1>SAY HELLO...!<br>TO SUPER HEALTHY MEALS</h1>
                 <div class="quick_button">
-                    <a href="" class="btn btn-half">Quick search</a>
+                    <a href="quicksearch.jsp" class="btn btn-half">Quick search</a>
                     <a href="#cities" class="btn btn-full">Search Branches</a>
                 </div>  
             </div></div>

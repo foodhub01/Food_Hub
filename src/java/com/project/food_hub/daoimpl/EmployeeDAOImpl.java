@@ -64,9 +64,9 @@ public class EmployeeDAOImpl implements EmployeeDAO{
                     int employeeId = resultSet.getInt(1);
                     String employeeName = resultSet.getString(2);           
                     String userName = resultSet.getString(3);
-                    String designation = resultSet.getString(3);
-                    String employeeContact = resultSet.getString(4);
-                    String employeePassword = resultSet.getString(5);
+                    String designation = resultSet.getString(4);
+                    String employeeContact = resultSet.getString(5);
+                    String employeePassword = resultSet.getString(6);
                     Employee employee = new Employee(employeeId,employeeName,userName,designation,employeeContact,employeePassword);
                     employeeList.add(employee);
                 }
@@ -92,9 +92,9 @@ public class EmployeeDAOImpl implements EmployeeDAO{
                     int employeeid = resultSet.getInt(1);
                     String employeeName = resultSet.getString(2);
                     String userName = resultSet.getString(3);
-                    String designation = resultSet.getString(3);
-                    String employeeContact = resultSet.getString(4);
-                    String employeePassword = resultSet.getString(5);
+                    String designation = resultSet.getString(4);
+                    String employeeContact = resultSet.getString(5);
+                    String employeePassword = resultSet.getString(6);
                     Employee employee = new Employee(employeeid,employeeName,userName,designation,employeeContact,employeePassword);
                     employeeList.add(employee);
                 }
