@@ -26,7 +26,7 @@ request.setAttribute("employee",employee);
 <input type="hidden" name="employeeId" value="${employee.employeeId}" />
             Employee Name :<input type="text" name="employeeName" value="${employee.employeeName}" />
             <br/>
-            Username :<input type="text" name="userName" value="${employee.userName}" />
+            Username :<input type="text" name="username" value="${employee.userName}" />
             <br/>
             Designation :<input type="text" name="designation" value="${employee.designation}"/>
             <br/>

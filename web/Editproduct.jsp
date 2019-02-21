@@ -13,9 +13,15 @@
 
 <html>
 <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
         <title>Food_Hub</title>
-</head>    <body>
+        
+        
+    </head>
+       
+        
+    <body>
 
 <form action="editproduct.do" method="post">
 <%
@@ -32,6 +38,6 @@ request.setAttribute("product",product);
             <input type="submit" name="action" value="Save Changes" />
             <input type="submit" name="action"  value="Delete" />
         </form>
-       <body>
+       </body>
 
 </html>

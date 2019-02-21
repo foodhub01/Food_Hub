@@ -37,18 +37,18 @@ public class AddEmployeeServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             String employeeName;
-               String userName;
+               String username;
                String designation;
                String employeeContact;
                String employeePassword;
                    
                employeeName = request.getParameter("employeeName");
-               userName = request.getParameter("userName");
+               username = request.getParameter("username");
                designation = request.getParameter("designation");
                employeeContact=request.getParameter("employeeContact");
                employeePassword=request.getParameter("employeePassword");
                EmployeeDAO employeeDAO = new EmployeeDAOImpl();
-            int count = employeeDAO.addEmployee(new Employee(employeeName,userName,designation,employeeContact,employeePassword));
+            int count = employeeDAO.addEmployee(new Employee(employeeName,username,designation,employeeContact,employeePassword));
              RequestDispatcher rd = null;
             if(count>0){
                rd = request.getRequestDispatcher("employeelist.do");

@@ -36,7 +36,7 @@
     
 </table>
 
-<a href="addproduct.jsp">+add more products</a>
+<a href="addproduct.jsp">Add more products</a>
 
 
 

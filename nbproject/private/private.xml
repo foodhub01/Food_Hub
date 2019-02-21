@@ -3,22 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/D:/Project/Food_Hub/src/java/com/project/food_hub/daoimpl/CustomerDAOImpl.java</file>
-            <file>file:/D:/Project/Food_Hub/web/Book.jsp</file>
-            <file>file:/D:/Project/Food_Hub/web/ex.jsp</file>
-            <file>file:/D:/Project/Food_Hub/web/signup.jsp</file>
-            <file>file:/D:/Project/Food_Hub/src/java/com/project/food_hub/daoimpl/DBConnection.java</file>
-            <file>file:/D:/Project/Food_Hub/src/java/com/project/food_hub/servlets/SignInServlet.java</file>
-            <file>file:/D:/Project/Food_Hub/web/welcome.jsp</file>
-=======
-            <file>file:/G:/Project/Food_Hub/web/order.jsp</file>
-            <file>file:/G:/Project/Food_Hub/web/style.css</file>
-            <file>file:/G:/Project/Food_Hub/src/java/com/project/food_hub/servlets/SignInServlet.java</file>
-            <file>file:/G:/Project/Food_Hub/web/style01.css</file>
-            <file>file:/G:/Project/Food_Hub/web/home.jsp</file>
-            <file>file:/G:/Project/Food_Hub/web/welcome.jsp</file>
->>>>>>> 4d75db890f1102757310c378c5eba9fdc0e56da9
+            <file>file:/D:/Project/Food_Hub/web/addproduct.jsp</file>
+            <file>file:/D:/Project/Food_Hub/src/java/com/project/food_hub/servlets/AddEmployeeServlet.java</file>
+            <file>file:/D:/Project/Food_Hub/web/Editproduct.jsp</file>
+            <file>file:/D:/Project/Food_Hub/web/employee.jsp</file>
+            <file>file:/D:/Project/Food_Hub/web/editemployee.jsp</file>
+            <file>file:/D:/Project/Food_Hub/src/java/com/project/food_hub/servlets/EmployeeListServlet.java</file>
+            <file>file:/D:/Project/Food_Hub/web/product.jsp</file>
         </group>
     </open-files>
 </project-private>

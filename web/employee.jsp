@@ -1,13 +1,14 @@
 <%-- 
-    Document   : employee
-    Created on : Mar 30, 2018, 11:44:05 AM
+    Document   : product
+    Created on : Mar 26, 2018, 2:18:45 PM
     Author     : Vedant
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
+
+
 
 <h2>List of Product</h2>
    
@@ -27,7 +28,7 @@
              <tr>
             <td><c:out value="${employee.employeeId}"/></td>
             <td><c:out value="${employee.employeeName}"/></td>
-            <td><c:out value="${employee.userName}"/></td>
+            <td><c:out value="${employee.username}"/></td>
             <td><c:out value="${employee.designation}"/></td>
             <td><c:out value="${employee.employeeContact}"/></td>
             <td><c:out value="${employee.employeePassword}"/></td>
@@ -41,5 +42,5 @@
     
 </table>
 
-<a href="addemployee.jsp">+Add Employees</a>
+<a href="addemployee.jsp"> Add Employees</a>
 

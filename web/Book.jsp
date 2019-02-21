@@ -19,7 +19,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <style>
+      body{
+         background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("img/homebg.jpg");
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+  </style>
+  </head>
     <body>
+    <center>
+        <form>
         <div class="container">
             
             <div class="col-md-6">
@@ -48,7 +60,7 @@
         <button type="submit" class="btn btn-primary form-control">Continue</button>
         
                         </div>
-                    </form>
+                    
             </div>
             
             
@@ -74,9 +86,7 @@
       
       
     </div>
-      <form>
-          Additional requirement:<input class="form-control" type="text" placeholder="Additional requirement" name="addinfo"/>
-      </form>
+      
   </div>
 </div>
                         <div class="form-group"><br>
@@ -84,9 +94,11 @@
         <button type="submit" class="btn btn-primary form-control">Continue</button>
         
                         </div>
-                    </form>
+                    
             </div> </div>
             
             
-        </div>    
+        </div>
+            </form>
+        </center>
     </body>
